@@ -16,52 +16,38 @@ Testing the webserver
 
 ## PROGRAM:
 ```
+content = """
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEC</title>
-    <style>
-        body {
-            background-color: cyan;
-            color: blue;
-        }
-        h1 {
-            text-align: center;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-            text-align: center;
-        }
-        li {
-            font-size: 18px;
-            margin-bottom: 10px;
-        }
-        a {
-            text-decoration: none;
-            color: blue;
-        }
-    </style>
+<title>My webserver</title>
 </head>
 <body>
-    <h1>SAVEETHA ENGINEERING COLLEGE</h1>
-    <ul>
-        <li>CYBER SECURITY</li>
-        <li>IOT</li>
-        <li>AI And ML</li>
-        <li>AI And DS</li>
-        <li>AI</li>
-    </ul>
-    <p><a href="https://www.saveetha.ac.in" target="_blank">Visit our college website</a></p>
+<h1><u>Languages used iun Web Development</u><h1>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>Bootstrap</li>
 </body>
 </html>
+"""
+class myhandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        print("request received")
+        self.send_response(200)
+        self.send_header('content-type', 'text/html; charset=utf-8')
+        self.end_headers()
+        self.wfile.write(content.encode())
+server_address = ('',80)
+httpd = HTTPServer(server_address,myhandler)
+print("my webserver is running...")
+httpd.serve_forever()
 ```
 
 
 ## OUTPUT:
-![image](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/f4358cde-67a1-4fef-93c5-57caeb6f8aa0)
+![00](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/a1c9d707-3636-4311-88a1-ba1fccd18833)
 
 
 ![image](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/af69484c-26fb-4da3-b101-3cac726daf76)
