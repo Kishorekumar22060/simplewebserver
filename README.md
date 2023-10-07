@@ -47,7 +47,7 @@ httpd.serve_forever()
 
 
 ## OUTPUT:
-![00](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/a1c9d707-3636-4311-88a1-ba1fccd18833)
+![240322796-9f350130-d2ea-4a76-9785-893692c855d2](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/259104a0-f06d-448f-b8ce-2d408aee2bee)
 
 
 ![image](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/af69484c-26fb-4da3-b101-3cac726daf76)
