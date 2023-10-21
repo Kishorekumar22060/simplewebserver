@@ -16,6 +16,11 @@ Testing the webserver
 
 ## PROGRAM:
 ```
+
+Developer: KISHORE KUMAR U 
+REGISTER Number: 23000800
+
+from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <!DOCTYPE html>
 <html>
@@ -31,26 +36,15 @@ content = """
 <li>Bootstrap</li>
 </body>
 </html>
-"""
-class myhandler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        print("request received")
-        self.send_response(200)
-        self.send_header('content-type', 'text/html; charset=utf-8')
-        self.end_headers()
-        self.wfile.write(content.encode())
-server_address = ('',80)
-httpd = HTTPServer(server_address,myhandler)
-print("my webserver is running...")
-httpd.serve_forever()
+
 ```
 
 
 ## OUTPUT:
-![240322796-9f350130-d2ea-4a76-9785-893692c855d2](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/259104a0-f06d-448f-b8ce-2d408aee2bee)
+![1111](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/503c8a26-2716-4325-ba3f-41dae4b7d311)
 
+![1111](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/d764e96c-5ee1-40ea-a10e-710bb1833b7a)
 
-![image](https://github.com/Kishorekumar22060/simplewebserver/assets/141472136/af69484c-26fb-4da3-b101-3cac726daf76)
 
 
 ## RESULT:
